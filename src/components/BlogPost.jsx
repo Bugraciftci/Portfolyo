@@ -1,10 +1,10 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
+import { Calendar, Clock, Share2 } from 'lucide-react'
 import './BlogPost.css'
 
 const BlogPost = () => {
-  const { id } = useParams()
+  const { category, id } = useParams()
 
   // In a real app, you'd fetch this data based on the id
   const post = {
@@ -81,11 +81,6 @@ const BlogPost = () => {
     <div className="blog-post-page">
       <div className="blog-post-header">
         <div className="container">
-          <Link to="/" className="back-link">
-            <ArrowLeft size={20} />
-            <span>Back to Home</span>
-          </Link>
-
           <div className="post-header-content">
             <span className="post-category">{post.category}</span>
             <h1>{post.title}</h1>

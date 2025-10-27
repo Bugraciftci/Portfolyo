@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
-import { ExternalLink, Github, Apple, Music, Gamepad2 } from 'lucide-react'
+import React from 'react'
+import { ExternalLink, Github } from 'lucide-react'
 import './Portfolio.css'
 
 const Portfolio = () => {
-  const [activeFilter, setActiveFilter] = useState('all')
 
   const projects = [
     {
@@ -76,34 +75,12 @@ const Portfolio = () => {
     }
   ]
 
-  const filters = [
-    { id: 'all', label: 'All Projects', icon: null },
-    { id: 'ios', label: 'iOS Apps', icon: <Apple size={18} /> },
-    { id: 'music', label: 'Music', icon: <Music size={18} /> },
-    { id: 'game', label: 'Games', icon: <Gamepad2 size={18} /> }
-  ]
-
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter)
+  const filteredProjects = projects
 
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
         <h2 className="section-title">My Work</h2>
-
-        <div className="portfolio-filters">
-          {filters.map(filter => (
-            <button
-              key={filter.id}
-              className={`filter-btn ${activeFilter === filter.id ? 'active' : ''}`}
-              onClick={() => setActiveFilter(filter.id)}
-            >
-              {filter.icon}
-              <span>{filter.label}</span>
-            </button>
-          ))}
-        </div>
 
         <div className="portfolio-grid">
           {filteredProjects.map(project => (

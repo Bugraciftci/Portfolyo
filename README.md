@@ -151,5 +151,5 @@ MIT License - feel free to use this project for your own portfolio.
 
 ---
 
-Made with ❤️ using React
+Made with Love ❤️ 
 

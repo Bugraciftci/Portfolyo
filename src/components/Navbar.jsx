@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import './Navbar.css'
 
 const Navbar = ({ theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,13 @@ const Navbar = ({ theme, toggleTheme }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-      setIsMobileMenuOpen(false)
-    }
+  const closeMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
+  const handleHomeClick = () => {
+    closeMenu()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -34,10 +36,51 @@ const Navbar = ({ theme, toggleTheme }) => {
 
         <div className="nav-right">
           <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <li><a onClick={() => scrollToSection('about')}>About</a></li>
-            <li><a onClick={() => scrollToSection('portfolio')}>Portfolio</a></li>
-            <li><a onClick={() => scrollToSection('blog')}>Blog</a></li>
-            <li><a onClick={() => scrollToSection('contact')}>Contact</a></li>
+            <li>
+              <Link 
+                to="/" 
+                onClick={handleHomeClick}
+                className={location.pathname === '/' ? 'active' : ''}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/blog/technology" 
+                onClick={closeMenu}
+                className={location.pathname.includes('/blog/technology') ? 'active' : ''}
+              >
+                Technology
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/blog/game-dev" 
+                onClick={closeMenu}
+                className={location.pathname.includes('/blog/game-dev') ? 'active' : ''}
+              >
+                Game
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/blog/music" 
+                onClick={closeMenu}
+                className={location.pathname.includes('/blog/music') ? 'active' : ''}
+              >
+                Music
+              </Link>
+            </li>
+            <li>
+              <Link 
+                to="/contact" 
+                onClick={closeMenu}
+                className={location.pathname === '/contact' ? 'active' : ''}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
 
           <button 

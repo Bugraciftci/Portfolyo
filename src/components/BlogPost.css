@@ -11,21 +11,6 @@
   padding: 3rem 0 4rem;
 }
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-.back-link:hover {
-  color: var(--accent-blue);
-  gap: 0.75rem;
-}
-
 .post-header-content {
   max-width: 800px;
   margin: 0 auto;

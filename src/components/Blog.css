@@ -137,6 +137,13 @@
   margin-bottom: 1.5rem;
 }
 
+.blog-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .blog-grid {
     grid-template-columns: 1fr;

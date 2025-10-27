@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Portfolio from './components/Portfolio'
-import Blog from './components/Blog'
+import Home from './components/Home'
 import BlogPost from './components/BlogPost'
+import BlogCategory from './components/BlogCategory'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import './App.css'
@@ -51,16 +49,10 @@ function App() {
         </div>
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Portfolio />
-              <Blog />
-              <Contact />
-            </>
-          } />
-          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:category" element={<BlogCategory />} />
+          <Route path="/blog/:category/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
       </div>
