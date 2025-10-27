@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import BlogPost from './components/BlogPost'
@@ -55,6 +57,8 @@ function App() {
           <Route path="/blog/:category/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </div>
     </Router>
   )
