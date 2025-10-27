@@ -37,7 +37,7 @@ const BlogPost = () => {
         }
         \`\`\`
 
-        ## Physics and Collision Detection
+        ## Physics and Collision Detection.
 
         Modern game engines like Unity and Unreal provide robust physics systems, but understanding the underlying concepts helps you make better design decisions.
 
