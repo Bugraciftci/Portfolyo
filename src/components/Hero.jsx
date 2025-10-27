@@ -1,22 +1,8 @@
 import React from 'react'
-import { Github, Linkedin, Mail, Apple, Music, Gamepad2 } from 'lucide-react'
+import { Apple, Music, Gamepad2 } from 'lucide-react'
 import './Hero.css'
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
-  const scrollToPortfolio = () => {
-    const element = document.getElementById('portfolio')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section className="hero" id="home">
       <div className="container hero-content">
@@ -41,27 +27,6 @@ const Hero = () => {
             <span className="tag"><Apple size={16} /> iOS Development</span>
             <span className="tag"><Music size={16} /> Music Production</span>
             <span className="tag"><Gamepad2 size={16} /> Game Dev</span>
-          </div>
-
-          <div className="hero-buttons">
-            <button className="btn btn-primary" onClick={scrollToPortfolio}>
-              View My Work
-            </button>
-            <button className="btn btn-secondary" onClick={scrollToContact}>
-              Get In Touch
-            </button>
-          </div>
-
-          <div className="social-links">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <Github size={24} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin size={24} />
-            </a>
-            <a href="mailto:your.email@example.com" aria-label="Email">
-              <Mail size={24} />
-            </a>
           </div>
         </div>
 
