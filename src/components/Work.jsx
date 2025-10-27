@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ExternalLink, Github } from 'lucide-react'
+import { Calendar, Clock, ArrowRight } from 'lucide-react'
 import './Work.css'
+import './Blog.css'
 
 const Work = () => {
 
@@ -12,7 +13,8 @@ const Work = () => {
       description: 'A comprehensive iOS app for tracking workouts, nutrition, and health metrics with HealthKit integration.',
       category: 'ios',
       image: '📱',
-      tech: ['SwiftUI', 'HealthKit', 'CoreData'],
+      date: 'Oct 20, 2025',
+      readTime: '5 min read',
       github: '#',
       demo: '#'
     },
@@ -22,7 +24,8 @@ const Work = () => {
       description: 'Beautiful weather app with detailed forecasts, interactive maps, and customizable widgets.',
       category: 'ios',
       image: '🌤️',
-      tech: ['Swift', 'UIKit', 'WeatherKit'],
+      date: 'Oct 15, 2025',
+      readTime: '4 min read',
       github: '#',
       demo: '#'
     },
@@ -32,7 +35,8 @@ const Work = () => {
       description: 'Elegant task management app with team collaboration, reminders, and cloud sync.',
       category: 'ios',
       image: '✅',
-      tech: ['SwiftUI', 'Firebase', 'Combine'],
+      date: 'Oct 10, 2025',
+      readTime: '6 min read',
       github: '#',
       demo: '#'
     },
@@ -42,7 +46,8 @@ const Work = () => {
       description: 'Digital audio workstation for creating beats and melodies with virtual instruments.',
       category: 'music',
       image: '🎵',
-      tech: ['Logic Pro', 'Audio Design'],
+      date: 'Sep 28, 2025',
+      readTime: '5 min read',
       demo: '#'
     },
     {
@@ -51,7 +56,8 @@ const Work = () => {
       description: 'Original lo-fi hip hop tracks perfect for studying and relaxation.',
       category: 'music',
       image: '🎧',
-      tech: ['Music Production', 'Mixing'],
+      date: 'Sep 20, 2025',
+      readTime: '3 min read',
       demo: '#'
     },
     {
@@ -60,7 +66,8 @@ const Work = () => {
       description: '2D platformer game with retro aesthetics and challenging levels.',
       category: 'game',
       image: '🎮',
-      tech: ['Unity', 'C#', 'Game Design'],
+      date: 'Sep 15, 2025',
+      readTime: '7 min read',
       github: '#',
       demo: '#'
     },
@@ -70,7 +77,8 @@ const Work = () => {
       description: 'Mind-bending puzzle game with unique mechanics and beautiful visuals.',
       category: 'game',
       image: '🧩',
-      tech: ['Unity', 'C#', 'Level Design'],
+      date: 'Sep 10, 2025',
+      readTime: '6 min read',
       github: '#',
       demo: '#'
     }
@@ -131,31 +139,29 @@ const Work = () => {
                   <div className="work-category-divider"></div>
                 </div>
 
-                <div className="work-grid">
+                <div className="blog-grid">
                   {categoryProjects.map(project => (
-                    <Link key={project.id} to={`/work/${project.id}`} className="work-card">
-                      <div className="work-emoji">{project.image}</div>
-                      <div className="work-card-content">
+                    <Link key={project.id} to={`/work/${project.id}`} className={`blog-card ${category === 'ios' ? 'blog-blue' : category === 'music' ? 'blog-purple' : 'blog-orange'}`}>
+                      <div className="blog-image">
+                        <div className="blog-emoji">{project.image}</div>
+                        <div className="blog-category">{categoryInfo[category].title}</div>
+                      </div>
+                      <div className="blog-content">
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
-                        <div className="work-tech">
-                          {project.tech.map((tech, index) => (
-                            <span key={index} className="tech-badge">{tech}</span>
-                          ))}
+                        <div className="blog-meta">
+                          <div className="meta-item">
+                            <Calendar size={16} />
+                            <span>{project.date}</span>
+                          </div>
+                          <div className="meta-item">
+                            <Clock size={16} />
+                            <span>{project.readTime}</span>
+                          </div>
                         </div>
-                        <div className="work-links">
-                          {project.github && (
-                            <a href={project.github} className="work-link" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                              <Github size={18} />
-                              <span>Code</span>
-                            </a>
-                          )}
-                          {project.demo && (
-                            <a href={project.demo} className="work-link" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                              <ExternalLink size={18} />
-                              <span>View</span>
-                            </a>
-                          )}
+                        <div className="read-more">
+                          <span>Read More</span>
+                          <ArrowRight size={18} />
                         </div>
                       </div>
                     </Link>
