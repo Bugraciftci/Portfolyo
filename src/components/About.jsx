@@ -1,5 +1,5 @@
 import React from 'react'
-import { Code, Music, Gamepad2, Smartphone, Zap, Heart } from 'lucide-react'
+import { Music, Gamepad2, Smartphone } from 'lucide-react'
 import './About.css'
 
 const About = () => {
@@ -81,36 +81,6 @@ const About = () => {
                 <p>{skill.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="stats">
-          <div className="stat">
-            <div className="stat-icon">
-              <Code size={24} />
-            </div>
-            <div className="stat-content">
-              <h4>5+</h4>
-              <p>Years Coding</p>
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat-icon">
-              <Zap size={24} />
-            </div>
-            <div className="stat-content">
-              <h4>20+</h4>
-              <p>Projects Completed</p>
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat-icon">
-              <Heart size={24} />
-            </div>
-            <div className="stat-content">
-              <h4>100%</h4>
-              <p>Passion Driven</p>
-            </div>
           </div>
         </div>
       </div>

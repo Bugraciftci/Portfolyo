@@ -6,6 +6,8 @@
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+  isolation: isolate;
+  background: var(--bg-primary);
 }
 
 .hero-background {
@@ -15,6 +17,7 @@
   right: 0;
   bottom: 0;
   z-index: 0;
+  overflow: hidden;
 }
 
 .gradient-orb {
@@ -23,6 +26,11 @@
   filter: blur(80px);
   opacity: 0.3;
   animation: float 20s ease-in-out infinite;
+}
+
+[data-theme="light"] .gradient-orb {
+  opacity: 0.15;
+  filter: blur(100px);
 }
 
 .orb-1 {
@@ -111,10 +119,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-blue);
 }
 
 .hero-description {
@@ -182,9 +187,13 @@
   border-radius: 12px;
   border: 1px solid var(--border-color);
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 60px var(--shadow);
   max-width: 500px;
   width: 100%;
+}
+
+[data-theme="light"] .code-window {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 .window-header {
@@ -194,6 +203,10 @@
   padding: 0.75rem 1rem;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="light"] .window-header {
+  background: #e8e8ed;
 }
 
 .window-buttons {
@@ -236,6 +249,10 @@
   color: var(--text-secondary);
 }
 
+[data-theme="light"] .code-content {
+  background: #f5f5f7;
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 2rem;
@@ -254,12 +271,21 @@
   padding-top: 6px;
 }
 
+[data-theme="light"] .mouse {
+  border-color: var(--border-color);
+}
+
 .wheel {
   width: 3px;
   height: 8px;
   background: var(--text-secondary);
   border-radius: 2px;
   animation: scroll 2s ease-in-out infinite;
+}
+
+[data-theme="light"] .wheel {
+  background: var(--text-primary);
+  opacity: 0.3;
 }
 
 @keyframes scroll {

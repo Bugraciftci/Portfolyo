@@ -10,6 +10,10 @@
   border-bottom: 1px solid var(--border-color);
 }
 
+[data-theme="light"] .blog-post-header {
+  background: var(--bg-primary);
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;

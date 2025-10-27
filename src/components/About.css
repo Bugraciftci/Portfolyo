@@ -1,12 +1,17 @@
 .about {
   background: var(--bg-primary);
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme="light"] .about {
+  background: var(--bg-secondary);
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  margin-bottom: 4rem;
 }
 
 .about-text {
@@ -115,64 +120,10 @@
   line-height: 1.6;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 3rem;
-  background: var(--bg-card);
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-}
-
-.stat {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.stat-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: rgba(0, 122, 255, 0.1);
-  color: var(--accent-blue);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat:nth-child(2) .stat-icon {
-  background: rgba(175, 82, 222, 0.1);
-  color: var(--accent-purple);
-}
-
-.stat:nth-child(3) .stat-icon {
-  background: rgba(255, 149, 0, 0.1);
-  color: var(--accent-orange);
-}
-
-.stat-content h4 {
-  font-size: 2rem;
-  color: var(--text-primary);
-  margin: 0;
-}
-
-.stat-content p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin: 0;
-}
-
 @media (max-width: 1024px) {
   .about-content {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
 
@@ -187,10 +138,6 @@
 
   .skill-card {
     padding: 1.5rem;
-  }
-
-  .stats {
-    padding: 2rem;
   }
 }
 
