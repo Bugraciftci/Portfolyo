@@ -1,14 +1,9 @@
 .footer {
-  background: var(--bg-primary);
-  border-top: 1px solid var(--border-color);
+  background: transparent;
   padding: 3rem 0 2rem;
   margin-top: auto;
   position: relative;
   z-index: 1;
-}
-
-[data-theme="light"] .footer {
-  background: var(--bg-secondary);
 }
 
 .footer-content {
@@ -38,7 +33,6 @@
   flex-direction: column;
   gap: 0.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
   width: 100%;
 }
 

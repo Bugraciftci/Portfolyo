@@ -1,11 +1,7 @@
 .portfolio {
-  background: var(--bg-secondary);
+  background: transparent;
   position: relative;
   z-index: 1;
-}
-
-[data-theme="light"] .portfolio {
-  background: var(--bg-primary);
 }
 
 .portfolio-filters {

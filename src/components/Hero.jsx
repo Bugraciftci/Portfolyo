@@ -19,12 +19,6 @@ const Hero = () => {
 
   return (
     <section className="hero" id="home">
-      <div className="hero-background">
-        <div className="gradient-orb orb-1"></div>
-        <div className="gradient-orb orb-2"></div>
-        <div className="gradient-orb orb-3"></div>
-      </div>
-
       <div className="container hero-content">
         <div className="hero-text">
           <div className="greeting">

@@ -1,11 +1,7 @@
 .contact {
-  background: var(--bg-secondary);
+  background: transparent;
   position: relative;
   z-index: 1;
-}
-
-[data-theme="light"] .contact {
-  background: var(--bg-primary);
 }
 
 .contact-subtitle {

@@ -1,11 +1,7 @@
 .about {
-  background: var(--bg-primary);
+  background: transparent;
   position: relative;
   z-index: 1;
-}
-
-[data-theme="light"] .about {
-  background: var(--bg-secondary);
 }
 
 .about-content {

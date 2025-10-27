@@ -7,6 +7,7 @@
   padding: 1.5rem 0;
   transition: all 0.3s ease;
   background: transparent;
+  isolation: isolate;
 }
 
 .navbar.scrolled {
