@@ -7,37 +7,19 @@ const BlogPost = () => {
   const { id } = useParams()
 
   const allBlogPosts = {
-    'ios-development-journey': {
-      title: 'My iOS Development Journey',
-      tags: ['iOS', 'SwiftUI', 'Development'],
-      date: 'November 20, 2025',
-      readTime: '5 min read',
-      image: '📱',
-      content: `My journey into iOS development started with a simple curiosity about how apps work. What began as a hobby quickly turned into a passion that shapes my career today.
+    'depresyon-ve-uretkensizlik': {
+      title: 'Depresyon ve Üretkensizlik Döngüsünden Çıkmak',
+      tags: ['Mental Health', 'Productivity', 'Life'],
+      date: 'November 22, 2025',
+      readTime: '3 min read',
+      image: '🌱',
+      content: `Merhaba, bu benim ilk blog yazım. Bu yüzden biraz içten ve samimi bir konuyla başlamak istedim. Hepimizin zaman zaman içine düştüğü depresyon ve üretkensizlik dönemleri oluyor. Bugün, bu döngüden nasıl çıkabileceğimiz üzerine konuşmak istiyorum.
 
-## Getting Started with Swift
+Bazen ne yaparsak yapalım hiçbir şey yolunda gitmiyormuş gibi hissederiz. Zihnimiz dağılır, odaklanamayız ve üretme isteğimiz tamamen kaybolur. Böyle anlarda önce durup nefes almak, sonra da gerçekten nasıl hissettiğimizi fark etmek gerekiyor.
 
-Learning Swift was my first step into the Apple ecosystem. The language's clean syntax and powerful features made it an excellent choice for beginners.
+Bir anlığına kafanızı çevirin, nerede olduğunuzu, ne yaptığınızı görün. Kendinizi sıkmayın; kısa bir yürüyüş yapmak, biraz kafa dinlemek yeterli olur. Gerekirse ara verin bir süre, toksik insanlardan uzaklaşın.
 
-## Discovering SwiftUI
-
-When Apple introduced SwiftUI, it revolutionized how I build user interfaces. The declarative approach makes UI code more intuitive.
-
-## Publishing to the App Store
-
-Taking an app from idea to the App Store taught me valuable lessons about user experience, testing, and marketing.
-
-## Current Focus
-
-Today, I'm focused on building apps that combine functionality with great design. My interests span music production apps, productivity tools, and indie games.
-
-## Advice for Beginners
-
-If you're starting your iOS development journey - start with the official Swift documentation, build small projects to practice, and join the developer community.
-
-## Conclusion
-
-iOS development is a rewarding field that combines creativity with technical skills. Whether you're building your first app or your fiftieth, there's always something new to learn and create.`
+Neyse, çok uzatmayacağım: Kısacası sosyal medyayı bırakın.`
     }
   }
 

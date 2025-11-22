@@ -9,13 +9,13 @@ const Blog = () => {
 
   const blogPosts = [
     {
-      id: 'ios-development-journey',
-      title: 'My iOS Development Journey',
-      excerpt: 'From learning Swift to publishing apps on the App Store - my journey as an iOS developer.',
-      tags: ['iOS', 'SwiftUI', 'Development'],
-      date: '2025-11-20',
-      readTime: '5 min read',
-      image: '�'
+      id: 'depresyon-ve-uretkensizlik',
+      title: 'Depresyon ve Üretkensizlik Döngüsünden Çıkmak',
+      excerpt: 'İçten ve samimi bir başlangıç: Üretkenliğimizi kaybettiğimiz anlarda nasıl kendimizi bulabiliriz?',
+      tags: ['Mental Health', 'Productivity', 'Life'],
+      date: '2025-11-22',
+      readTime: '3 min read',
+      image: '🌱'
     }
   ]
 
