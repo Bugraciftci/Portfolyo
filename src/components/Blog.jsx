@@ -9,58 +9,13 @@ const Blog = () => {
 
   const blogPosts = [
     {
-      id: 'tech-1',
-      title: 'Building Modern iOS Apps with SwiftUI',
-      excerpt: 'Learn how SwiftUI revolutionizes iOS development with declarative syntax and powerful features.',
-      tags: ['iOS', 'SwiftUI', 'Mobile Development'],
-      date: '2025-10-20',
+      id: 'ios-development-journey',
+      title: 'My iOS Development Journey',
+      excerpt: 'From learning Swift to publishing apps on the App Store - my journey as an iOS developer.',
+      tags: ['iOS', 'SwiftUI', 'Development'],
+      date: '2025-11-20',
       readTime: '5 min read',
-      image: '📱'
-    },
-    {
-      id: 'music-1',
-      title: 'My Journey into Music Production',
-      excerpt: 'From complete beginner to creating my first beats - lessons learned along the way.',
-      tags: ['Music Production', 'DAW', 'Sound Design'],
-      date: '2025-10-15',
-      readTime: '4 min read',
-      image: '🎵'
-    },
-    {
-      id: 'game-dev-1',
-      title: 'Game Development Fundamentals',
-      excerpt: 'Understanding core concepts like game loops, physics, and player mechanics.',
-      tags: ['Game Development', 'Unity', 'Programming'],
-      date: '2025-10-10',
-      readTime: '6 min read',
-      image: '🎮'
-    },
-    {
-      id: 'tech-2',
-      title: 'Mastering Combine Framework',
-      excerpt: 'A deep dive into reactive programming with Combine in iOS applications.',
-      tags: ['iOS', 'Combine', 'Reactive Programming'],
-      date: '2025-10-05',
-      readTime: '7 min read',
-      image: '⚡'
-    },
-    {
-      id: 'music-2',
-      title: 'Sound Design Tips for Beginners',
-      excerpt: 'Essential techniques and tools for creating unique sounds in your music productions.',
-      tags: ['Sound Design', 'Music Production', 'Synthesis'],
-      date: '2025-09-28',
-      readTime: '5 min read',
-      image: '🎧'
-    },
-    {
-      id: 'game-dev-2',
-      title: 'Creating Engaging Game Mechanics',
-      excerpt: 'How to design gameplay that keeps players coming back for more.',
-      tags: ['Game Design', 'Game Development', 'UX'],
-      date: '2025-09-20',
-      readTime: '8 min read',
-      image: '🕹️'
+      image: '�'
     }
   ]
 
@@ -135,7 +90,6 @@ const Blog = () => {
                   </h3>
                 </div>
                 <div className="post-meta-line">
-                  <span className="post-emoji">{post.image}</span>
                   <div className="post-tags-inline">
                     {post.tags.map((tag, idx) => (
                       <span key={idx} className="inline-tag">
