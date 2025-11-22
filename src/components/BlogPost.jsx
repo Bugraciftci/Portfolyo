@@ -1,15 +1,15 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Calendar, Clock, Share2 } from 'lucide-react'
+import { Calendar, Clock, Share2, Tag, ArrowLeft } from 'lucide-react'
 import './BlogPost.css'
 
 const BlogPost = () => {
-  const { category, id } = useParams()
+  const { id } = useParams()
 
   const allBlogPosts = {
     'game-dev-1': {
       title: 'Game Development Fundamentals',
-      category: 'Game Development',
+      tags: ['Game Development', 'Unity', 'Programming'],
       date: 'October 10, 2025',
       readTime: '6 min read',
       image: '🎮',
@@ -48,7 +48,7 @@ const BlogPost = () => {
     },
     'game-dev-2': {
       title: 'Creating Engaging Game Mechanics',
-      category: 'Game Development',
+      tags: ['Game Design', 'Game Development', 'UX'],
       date: 'September 20, 2025',
       readTime: '8 min read',
       image: '🕹️',
@@ -86,7 +86,7 @@ const BlogPost = () => {
     },
     'game-dev-3': {
       title: 'Unity vs Unreal: Choosing Your Engine',
-      category: 'Game Development',
+      tags: ['Game Development', 'Unity', 'Unreal Engine'],
       date: 'August 15, 2025',
       readTime: '7 min read',
       image: '⚙️',
@@ -129,7 +129,7 @@ const BlogPost = () => {
     },
     'music-1': {
       title: 'My Journey into Music Production',
-      category: 'Music Production',
+      tags: ['Music Production', 'DAW', 'Sound Design'],
       date: 'October 15, 2025',
       readTime: '4 min read',
       image: '🎵',
@@ -182,7 +182,7 @@ const BlogPost = () => {
     },
     'music-2': {
       title: 'Sound Design Tips for Beginners',
-      category: 'Music Production',
+      tags: ['Sound Design', 'Music Production', 'Synthesis'],
       date: 'September 28, 2025',
       readTime: '5 min read',
       image: '🎧',
@@ -241,7 +241,7 @@ const BlogPost = () => {
     },
     'music-3': {
       title: 'Best DAWs for Music Production in 2025',
-      category: 'Music Production',
+      tags: ['Music Production', 'DAW', 'Software'],
       date: 'August 10, 2025',
       readTime: '6 min read',
       image: '🎹',
@@ -327,7 +327,7 @@ const BlogPost = () => {
     },
     'tech-1': {
     title: 'Building Modern iOS Apps with SwiftUI',
-      category: 'Technology',
+      tags: ['iOS', 'SwiftUI', 'Mobile Development'],
     date: 'October 20, 2025',
     readTime: '5 min read',
     image: '📱',
@@ -395,7 +395,7 @@ const BlogPost = () => {
     },
     'tech-2': {
       title: 'Mastering Combine Framework',
-      category: 'Technology',
+      tags: ['iOS', 'Combine', 'Reactive Programming'],
       date: 'October 5, 2025',
       readTime: '7 min read',
       image: '⚡',
@@ -476,7 +476,7 @@ const BlogPost = () => {
     },
     'tech-3': {
       title: 'The Future of Mobile Development',
-      category: 'Technology',
+      tags: ['Mobile Development', 'Flutter', 'React Native'],
       date: 'September 12, 2025',
       readTime: '6 min read',
       image: '🚀',
@@ -578,8 +578,19 @@ const BlogPost = () => {
       <div className="blog-post-header">
         <div className="container">
           <div className="post-header-content">
-            <span className="post-category">{post.category}</span>
+            <Link to="/blog" className="back-to-blog">
+              <ArrowLeft size={18} />
+              <span>Back to Blog</span>
+            </Link>
             <h1>{post.title}</h1>
+            <div className="post-tags">
+              {post.tags.map((tag, index) => (
+                <span key={index} className="post-tag">
+                  <Tag size={14} />
+                  {tag}
+                </span>
+              ))}
+            </div>
             <div className="post-meta-header">
               <div className="meta-item">
                 <Calendar size={18} />

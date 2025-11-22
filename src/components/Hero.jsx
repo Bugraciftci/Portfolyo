@@ -26,7 +26,7 @@ const Hero = () => {
           <div className="hero-tags">
             <span className="tag"><Apple size={16} /> iOS Development</span>
             <span className="tag"><Music size={16} /> Music Production</span>
-            <span className="tag"><Gamepad2 size={16} /> Game Dev</span>
+            <span className="tag"><Gamepad2 size={16} /> Game Development</span>
           </div>
         </div>
 
@@ -60,12 +60,6 @@ struct Developer {
               </pre>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="scroll-indicator">
-        <div className="mouse">
-          <div className="wheel"></div>
         </div>
       </div>
     </section>

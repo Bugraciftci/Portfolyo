@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Mail, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Mail, Send, Github, Linkedin, Twitter, FileText, CheckCircle, Apple } from 'lucide-react'
 import './Contact.css'
 
 const Contact = () => {
@@ -9,6 +10,9 @@ const Contact = () => {
     message: ''
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' or 'error'
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,61 +20,109 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In a real app, you'd send this data to a backend
-    console.log('Form submitted:', formData)
-    alert('Thanks for reaching out! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    
+    // Validation
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Please fill in all fields')
+      return
+    }
+
+    if (!formData.email.includes('@')) {
+      alert('Please enter a valid email address')
+      return
+    }
+
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      // Simulate form submission (you can replace this with actual API call)
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // You can integrate with email services like:
+      // - EmailJS: https://www.emailjs.com/
+      // - Formspree: https://formspree.io/
+      // - Your own backend API
+      
+      console.log('Form submitted:', formData)
+      
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
+      
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      setSubmitStatus('error')
+      alert('Something went wrong. Please try again or email me directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
+  const socialLinks = [
+    { icon: Twitter, label: 'Twitter', url: 'https://x.com/Bugra_ciftci_', external: true },
+    { icon: Github, label: 'GitHub', url: 'https://github.com/Bugraciftci', external: true },
+    { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/muhammed-bu%C4%9Fra-%C3%A7ift%C3%A7i-07b22b244/', external: true },
+    { icon: Apple, label: 'App Store', url: 'https://apps.apple.com/tr/developer/muhammed-bugra-ciftci/id1726010593', external: true },
+    { icon: Mail, label: 'Email', url: 'mailto:bugraciftci7@gmail.com', external: false },
+    { icon: FileText, label: 'Resume', url: '/resume', external: false, internal: true }
+  ]
+
   return (
-    <div className="contact-page">
-      <div className="contact-page-header">
-        <div className="container">
-          <h1>Get In Touch</h1>
-          <p className="contact-page-subtitle">
-            Have a project in mind or just want to chat? I'd love to hear from you!
-          </p>
+    <div className="retro-contact">
+      <div className="container">
+        {/* Header */}
+        <div className="retro-contact-header">
+          <h1 className="contact-title">
+            Contact<span className="title-dot">.</span>
+          </h1>
         </div>
-      </div>
 
-      <section className="contact-section">
-        <div className="container">
-          <div className="contact-content">
-            <div className="contact-info">
-              <div className="info-card">
-                <div className="info-icon">
-                  <Mail size={32} />
-                </div>
-                <h3>Email Me</h3>
-                <p>Feel free to reach out anytime</p>
-                <a href="mailto:your.email@example.com" className="info-link">
-                  your.email@example.com
+        {/* Social Links - Simple List */}
+        <div className="contact-links-section">
+          <h2 className="section-heading">Get in touch</h2>
+          <div className="social-links-list">
+            {socialLinks.map((link, index) => {
+              if (link.internal) {
+                return (
+                  <Link
+                    key={index}
+                    to={link.url}
+                    className="social-link-item"
+                  >
+                    <link.icon size={20} />
+                    <span>{link.label}</span>
+                  </Link>
+                )
+              }
+              return (
+                <a
+                  key={index}
+                  href={link.url}
+                  className="social-link-item"
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                >
+                  <link.icon size={20} />
+                  <span>{link.label}</span>
                 </a>
-              </div>
+              )
+            })}
+          </div>
+        </div>
 
-              <div className="contact-social">
-                <h3>Connect With Me</h3>
-                <div className="social-grid">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-card">
-                    <Github size={28} />
-                    <span>GitHub</span>
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-card">
-                    <Linkedin size={28} />
-                    <span>LinkedIn</span>
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-card">
-                    <Twitter size={28} />
-                    <span>Twitter</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
+        {/* Contact Form */}
+        <div className="contact-form-section">
+          <h2 className="section-heading">Send a message</h2>
+          <form className="retro-form" onSubmit={handleSubmit}>
+            <div className="form-row">
+              <div className="form-field">
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
@@ -83,7 +135,7 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="form-group">
+              <div className="form-field">
                 <label htmlFor="email">Email</label>
                 <input
                   type="email"
@@ -91,32 +143,43 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="your.email@example.com"
+                  placeholder="your@email.com"
                   required
                 />
               </div>
+            </div>
 
-              <div className="form-group">
-                <label htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell me about your project..."
-                  rows="6"
-                  required
-                ></textarea>
+            <div className="form-field">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Your message..."
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            {submitStatus === 'success' && (
+              <div className="success-message">
+                <CheckCircle size={20} />
+                <span>Message sent successfully! I'll get back to you soon.</span>
               </div>
+            )}
 
-              <button type="submit" className="btn btn-primary submit-btn">
-                <Send size={18} />
-                <span>Send Message</span>
-              </button>
-            </form>
-          </div>
+            <button 
+              type="submit" 
+              className="retro-submit-btn"
+              disabled={isSubmitting}
+            >
+              <Send size={18} />
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+            </button>
+          </form>
         </div>
-      </section>
+      </div>
     </div>
   )
 }

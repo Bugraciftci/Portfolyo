@@ -23,7 +23,7 @@ const Footer = () => {
               © {currentYear} Bugra. All rights reserved.
             </p>
             <p className="made-with">
-              Made with <Heart size={16} className="heart-icon" /> using React
+              Made with <Heart size={16} className="heart-icon" />
             </p>
           </div>
         </div>

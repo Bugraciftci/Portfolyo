@@ -47,38 +47,11 @@ const Navbar = ({ theme, toggleTheme }) => {
             </li>
             <li>
               <Link 
-                to="/work" 
+                to="/blog" 
                 onClick={closeMenu}
-                className={location.pathname === '/work' ? 'active' : ''}
+                className={location.pathname.includes('/blog') ? 'active' : ''}
               >
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/blog/technology" 
-                onClick={closeMenu}
-                className={location.pathname.includes('/blog/technology') ? 'active' : ''}
-              >
-                Technology
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/blog/game-dev" 
-                onClick={closeMenu}
-                className={location.pathname.includes('/blog/game-dev') ? 'active' : ''}
-              >
-                Game
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/blog/music" 
-                onClick={closeMenu}
-                className={location.pathname.includes('/blog/music') ? 'active' : ''}
-              >
-                Music
+                Blog
               </Link>
             </li>
             <li>

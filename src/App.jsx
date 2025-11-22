@@ -4,11 +4,10 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import Work from './components/Work'
-import WorkDetail from './components/WorkDetail'
 import BlogPost from './components/BlogPost'
-import BlogCategory from './components/BlogCategory'
+import Blog from './components/Blog'
 import Contact from './components/Contact'
+import Resume from './components/Resume'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -54,11 +53,10 @@ function App() {
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/work" element={<Work />} />
-          <Route path="/work/:id" element={<WorkDetail />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog/:category" element={<BlogCategory />} />
-          <Route path="/blog/:category/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
         <Analytics />
