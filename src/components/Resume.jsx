@@ -7,74 +7,63 @@ const Resume = () => {
   const resumeData = {
     personal: {
       name: "Muhammed Buğra Çiftçi",
-      title: "iOS Developer",
+      title: "Junior iOS Developer",
       location: "Turkey"
     },
     
-    summary: "Passionate iOS developer specializing in Swift and SwiftUI. Experienced in building elegant, user-friendly mobile applications with clean architecture. Also active in music production and game development, bringing creative problem-solving skills to every project.",
+    summary: "Junior iOS Developer with strong knowledge of Swift, SwiftUI, and UIKit, and hands-on experience in publishing apps to the App Store with thousands of active users. Skilled in MVVM architecture, OOP, and SOLID principles, with a passion for creating intuitive user interfaces and smooth mobile experiences. Experienced in Firebase, analytics, and CI/CD workflows, and eager to contribute to innovative products that reach millions of users.",
     
     experience: [
       {
-        title: "iOS Developer",
-        company: "Freelance",
-        period: "2022 - Present",
-        location: "Remote",
-        responsibilities: [
-          "Developed multiple iOS applications from concept to App Store deployment",
-          "Implemented complex UI/UX designs using SwiftUI and UIKit",
-          "Integrated RESTful APIs and third-party services",
-          "Applied MVVM and Clean Architecture patterns",
-          "Maintained 95%+ code coverage with unit tests"
-        ]
-      },
-      {
-        title: "Mobile App Developer",
-        company: "Personal Projects",
-        period: "2021 - 2022",
+        title: "iOS Developer Intern",
+        company: "United Yazılım",
+        period: "Summer 2025",
         location: "Turkey",
         responsibilities: [
-          "Created iOS games using SpriteKit and GameKit frameworks",
-          "Built music production apps with Core Audio",
-          "Implemented data persistence with Core Data and UserDefaults",
-          "Published apps on the Apple App Store"
+          "Contributed to iOS app development using Swift and SwiftUI",
+          "Assisted in applying MVVM architecture and Clean Architecture concepts",
+          "Developed and tested small features including custom UI components and animations",
+          "Gained practical experience with Firebase services (Analytics, Realtime Database)",
+          "Collaborated with team members using Git & GitHub and participated in code reviews"
         ]
       }
     ],
     
     education: [
       {
-        degree: "Bachelor of Science in Computer Science",
-        school: "University",
-        period: "2020 - 2024",
+        degree: "Computer Engineering",
+        school: "Bahcesehir University",
+        period: "2022 - 2026",
         location: "Turkey",
-        details: "Focus on mobile development, software engineering, and algorithms"
+        details: "Bachelor's Degree"
       }
     ],
     
     skills: {
-      "Programming Languages": ["Swift", "Objective-C", "JavaScript", "Python"],
-      "iOS Frameworks": ["SwiftUI", "UIKit", "Core Data", "Core Animation", "Combine"],
-      "Development Tools": ["Xcode", "Git", "CocoaPods", "Swift Package Manager"],
-      "Game Development": ["SpriteKit", "GameKit", "SceneKit"],
-      "Music Production": ["Logic Pro", "Core Audio", "AVFoundation"],
-      "Other": ["REST APIs", "Firebase", "TestFlight", "App Store Connect"]
+      "Programming": ["Swift", "SwiftUI", "UIKit", "MVVM", "OOP", "SOLID"],
+      "Backend & Tools": ["Firebase", "Core ML", "Combine", "Git", "GitHub"],
+      "APIs & Frameworks": ["OpenAI API", "Speech Framework", "SiriKit", "SDWebImage"],
+      "Analytics & CI/CD": ["Firebase Analytics", "App Store Connect", "TestFlight"]
     },
     
     projects: [
       {
-        name: "iOS Music App",
-        description: "Music streaming and production application with custom audio engine",
-        tech: ["SwiftUI", "Core Audio", "AVFoundation"]
+        name: "CS Smokes",
+        role: "iOS Developer",
+        description: "Created an iOS app that helps Counter-Strike players find and learn smoke spots. Published on the App Store with 10,000+ downloads and 50,000+ weekly impressions.",
+        tech: ["SwiftUI", "MVVM", "Firebase", "Firebase Analytics"]
       },
       {
-        name: "Mobile Game",
-        description: "2D puzzle game with online multiplayer functionality",
-        tech: ["SpriteKit", "GameKit", "Firebase"]
+        name: "PicGen",
+        role: "iOS Developer",
+        description: "Developed an iOS app generating images from text using OpenAI DALL·E API. Integrated Core ML for offline image processing, SDWebImage for caching. Implemented Combine for real-time updates.",
+        tech: ["SwiftUI", "OpenAI API", "Core ML", "Combine", "SDWebImage"]
       },
       {
-        name: "Productivity App",
-        description: "Task management app with widgets and notifications",
-        tech: ["SwiftUI", "WidgetKit", "Core Data"]
+        name: "Chatify",
+        role: "Backend Developer",
+        description: "Built a chat app with OpenAI GPT-4o API and Firebase Realtime Database. Implemented JWT Authentication for secure login/session management. Added voice interaction using Speech Framework & SiriKit.",
+        tech: ["OpenAI GPT-4o", "Firebase", "JWT", "MVC", "Speech Framework", "SiriKit"]
       }
     ]
   };
@@ -164,11 +153,14 @@ const Resume = () => {
         <section className="resume-section">
           <h2 className="section-header">
             <Book size={18} />
-            Notable Projects<span className="header-dot">.</span>
+            Projects<span className="header-dot">.</span>
           </h2>
           {resumeData.projects.map((project, index) => (
             <div key={index} className="project-entry">
-              <h3 className="entry-title">{project.name}</h3>
+              <div className="entry-header">
+                <h3 className="entry-title">{project.name}</h3>
+                <div className="entry-company">{project.role}</div>
+              </div>
               <p className="project-description">{project.description}</p>
               <div className="project-tech">
                 <strong>Technologies:</strong> {project.tech.join(' • ')}
