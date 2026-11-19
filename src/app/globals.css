@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #09090b;
+  --bg-elevated: #111113;
+  --border-hairline: rgba(255, 255, 255, 0.08);
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Authentic Apple iOS App Icon Squircle */
+.ios-icon {
+  border-radius: 22.5%;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Custom sleek monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
