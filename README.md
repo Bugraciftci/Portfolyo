@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./assets/banner.svg" width="100%" alt="Portfolyo Banner" />
+</div>
+
 # Muhammed Buğra Çiftçi — Engineering Portfolio
 
 [![Live Demo](https://img.shields.io/badge/Live_Site-portfolyo--nine--tau.vercel.app-38BDF8?style=for-the-badge&logo=vercel&logoColor=0F172A)](https://portfolyo-nine-tau.vercel.app)
