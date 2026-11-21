@@ -66,13 +66,13 @@ export function HeroSection({ lang, onSelectAppModal }: HeroSectionProps) {
                   Bahçeşehir Üniversitesi Bilgisayar Mühendisliği mezunu iOS Yazılım Mühendisiyim.{' '}
                   <span className="text-zinc-200 font-medium">Swift 6, SwiftUI, UIKit, Apple CarPlay (CPTemplate), ScreenTime API</span>{' '}
                   ve temiz MVVM mimarisiyle App Store’da yayında olan{' '}
-                  <span className="text-zinc-200 font-medium">20’den fazla native iOS uygulaması</span>{' '}
+                  <span className="text-zinc-200 font-medium">30’dan fazla native iOS uygulaması</span>{' '}
                   (&gt;%99.5 crash-free oturum oranı) geliştirdim.
                 </>
               ) : (
                 <>
                   Computer Engineering graduate (Bahçeşehir University) and iOS Software Engineer with commercial production experience and{' '}
-                  <span className="text-zinc-200 font-medium">20+ live native apps on the App Store</span>{' '}
+                  <span className="text-zinc-200 font-medium">30+ live native apps on the App Store</span>{' '}
                   (&gt;99.5% crash-free). Specialized in{' '}
                   <span className="text-zinc-200 font-medium">Swift 6, SwiftUI, UIKit, CarPlay (CPTemplate), ScreenTime API</span>, and MVVM.
                 </>

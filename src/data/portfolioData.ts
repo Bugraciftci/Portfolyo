@@ -43,7 +43,7 @@ export const DEVELOPER_PROFILE = {
   appStoreDeveloperUrl: 'https://apps.apple.com/tr/developer/muhammed-bugra-ciftci/id1726010593',
   appStoreDeveloperName: 'Muhammed Bugra Ciftci',
   stats: {
-    publishedApps: '20+',
+    publishedApps: '30+',
     crashFree: '>99.5%',
     nativeSwift: 'Swift 6',
     fpsPerformance: '60/120 FPS',
@@ -52,8 +52,8 @@ export const DEVELOPER_PROFILE = {
 
 export const CV_DATA = {
   summary: {
-    tr: 'Bahçeşehir Üniversitesi Bilgisayar Mühendisliği (%100 İngilizce) mezunu ve ticari üretim deneyimine sahip iOS Yazılım Mühendisi. App Store’da yayında olan 20+ native iOS/iPadOS uygulaması (>%99.5 crash-free oturum oranı). Swift 6, SwiftUI, UIKit, Apple CarPlay (CPTemplate), ScreenTime API (FamilyControls), WidgetKit, Keychain güvenliği, StoreKit 2 / RevenueCat ve yapılandırılmış eşzamanlılık (async/await, Actors) konularında uzmanlaşmıştır.',
-    en: 'Computer Engineering graduate (Bahçeşehir University) and iOS Software Engineer with commercial production experience and 20+ published native apps on the App Store (>99.5% crash-free sessions). Specialized in Swift 6, SwiftUI, UIKit, Apple CarPlay (CPTemplate), ScreenTime API (FamilyControls), WidgetKit, Keychain security, StoreKit 2 / RevenueCat, and structured concurrency.',
+    tr: 'Bahçeşehir Üniversitesi Bilgisayar Mühendisliği (%100 İngilizce) mezunu ve ticari üretim deneyimine sahip iOS Yazılım Mühendisi. App Store’da yayında olan 30+ native iOS/iPadOS uygulaması (>%99.5 crash-free oturum oranı). Swift 6, SwiftUI, UIKit, Apple CarPlay (CPTemplate), ScreenTime API (FamilyControls), WidgetKit, Keychain güvenliği, StoreKit 2 / RevenueCat ve yapılandırılmış eşzamanlılık (async/await, Actors) konularında uzmanlaşmıştır.',
+    en: 'Computer Engineering graduate (Bahçeşehir University) and iOS Software Engineer with commercial production experience and 30+ published native apps on the App Store (>99.5% crash-free sessions). Specialized in Swift 6, SwiftUI, UIKit, Apple CarPlay (CPTemplate), ScreenTime API (FamilyControls), WidgetKit, Keychain security, StoreKit 2 / RevenueCat, and structured concurrency.',
   },
   experience: [
     {
@@ -101,12 +101,12 @@ export const CV_DATA = {
       location: 'İstanbul, Türkiye',
       bullets: {
         tr: [
-          'AI ses/görüntü, bilgisayarlı görü (Vision), üretkenlik ve yardımcı araçlar kategorilerinde 20+ yayınlanmış native iOS uygulamasını uçtan uca tasarladım, geliştirdim ve ölçeklendirdim.',
+          'AI ses/görüntü, bilgisayarlı görü (Vision), üretkenlik ve yardımcı araçlar kategorilerinde 30+ yayınlanmış native iOS uygulamasını uçtan uca tasarladım, geliştirdim ve ölçeklendirdim.',
           'StoreKit 2 & RevenueCat abonelik doğrulama, AVFoundation akış (streaming) medya oynatıcıları ve sistem seviyesinde ScreenTime / WidgetKit uygulama uzantıları geliştirdim.',
           'Uçtan uca sürüm mühendisliği, TestFlight beta dağıtımı, Firebase Crashlytics/Analytics telemetrisi ve ASO süreçlerini yöneterek >%99.5 crash-free oturum oranını korudum.',
         ],
         en: [
-          'Designed, built, and scaled a commercial portfolio of 20+ published native iOS apps across AI audio/vision, productivity, health, and utilities.',
+          'Designed, built, and scaled a commercial portfolio of 30+ published native iOS apps across AI audio/vision, productivity, health, and utilities.',
           'Implemented StoreKit 2 & RevenueCat entitlement verification, AVFoundation streaming media players, and system-level ScreenTime / WidgetKit app extensions.',
           'Owned end-to-end release engineering, TestFlight beta distribution, Firebase crash/funnel telemetry, and ASO, sustaining >99.5% crash-free sessions.',
         ],

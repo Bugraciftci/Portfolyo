@@ -210,7 +210,7 @@ export function ContactSection({ lang }: ContactSectionProps) {
           </div>
           <div className="flex items-center gap-6">
             <a href="#apps" className="hover:text-zinc-200 transition-colors">
-              Apps (20+)
+              Apps (30+)
             </a>
             <a href="#architecture" className="hover:text-zinc-200 transition-colors">
               SwiftUI

@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'Muhammed Buğra Çiftçi | iOS Software Engineer',
   description:
-    'iOS Software Engineer specializing in Swift 6, SwiftUI, UIKit, CarPlay (CPTemplate), ScreenTime API, and MVVM architecture. 20+ live iOS & iPadOS applications on the App Store.',
+    'iOS Software Engineer specializing in Swift 6, SwiftUI, UIKit, CarPlay (CPTemplate), ScreenTime API, and MVVM architecture. 30+ live iOS & iPadOS applications on the App Store.',
   keywords: [
     'Muhammed Buğra Çiftçi',
     'Buğra Çiftçi',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Muhammed Buğra Çiftçi — iOS Software Engineer',
     description:
-      'Explore 20+ native iOS & iPadOS apps built with Swift 6, SwiftUI, and clean MVVM architecture.',
+      'Explore 30+ native iOS & iPadOS apps built with Swift 6, SwiftUI, and clean MVVM architecture.',
     type: 'website',
     locale: 'tr_TR',
   },
