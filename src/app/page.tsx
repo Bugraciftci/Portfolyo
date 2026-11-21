@@ -10,7 +10,7 @@ import { ContactSection } from '@/components/ContactSection';
 import { PortfolioApp } from '@/data/portfolioData';
 
 export default function PortfolioHomePage() {
-  const [lang, setLang] = useState<'tr' | 'en'>('tr');
+  const [lang, setLang] = useState<'tr' | 'en'>('en');
   const [selectedApp, setSelectedApp] = useState<PortfolioApp | null>(null);
 
   return (

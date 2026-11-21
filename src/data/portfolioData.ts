@@ -237,6 +237,12 @@ export const PORTFOLIO_APPS: PortfolioApp[] = [
     accentColor: '#E4E4E7',
     devices: ['iPhone', 'iPad'],
     techStack: ['SwiftUI', 'MVVM', 'Firebase Analytics', 'RevenueCat', 'Multi-Locale'],
+    screenshots: [
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e2/af/e9/e2afe903-8b76-5958-aef0-2a11541319e6/fd2a83f4-cbea-485a-8d27-c3f244694569_1_TR.png/900x0w.jpg',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/12/26/66/1226666d-32e8-669b-5fd0-adb749878936/94b59a3d-80c7-4c7a-9cf1-e59ccc4166f9_2_TR.png/900x0w.jpg',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a5/e9/21/a5e921cb-d9bc-e7b6-8178-e66457aac9e9/12130f33-02df-4038-8035-4cfefc224c83_3_TR.png/900x0w.jpg',
+      'https://is5-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/58/c3/f5/58c3f57a-2eae-e9c3-d69f-21f9e89fed82/4b9f6276-4c41-4321-a6e0-50ccfd372c1b_4_TR.png/900x0w.jpg',
+    ],
     tagline: {
       tr: 'Counter-Strike 2 oyuncuları için interaktif bomba taktikleri, harita lineup rehberi ve konsol komutları.',
       en: 'Interactive grenade lineups, tactical map radar, and console commands for CS2 players.',
