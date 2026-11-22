@@ -1068,6 +1068,109 @@ final class CarPlaySceneDelegate: UIResponder, CPTemplateApplicationSceneDelegat
   },
 ];
 
+export interface OpenSourceProject {
+  id: string;
+  name: string;
+  badge: string;
+  githubUrl: string;
+  tags: string[];
+  tagline: { tr: string; en: string };
+  description: { tr: string; en: string };
+}
+
+export const OPEN_SOURCE_PROJECTS: OpenSourceProject[] = [
+  {
+    id: 'swiftstoreflow',
+    name: 'SwiftStoreFlow v2.0',
+    badge: 'Swift 6 · StoreKit 2 · 24 XCTests',
+    githubUrl: 'https://github.com/Bugraciftci/SwiftStoreFlow',
+    tags: ['Swift 6', 'StoreKit 2', 'A/B Bucketing', 'Win-Back Engine', 'Keychain'],
+    tagline: {
+      tr: 'StoreKit 2 abonelik yaşam döngüsü, deterministik A/B paywall ve Win-Back teklif motoru.',
+      en: 'StoreKit 2 monetization architecture, deterministic A/B paywalls & Win-Back offer engine.',
+    },
+    description: {
+      tr: 'Actor izoleli satın alma tekilleştirme, Keychain çevrimdışı entitlement, FNV-1a A/B bucketing, Ki-Kare SRM denetleyicisi ve JWS doğrulama kancaları.',
+      en: 'Actor-isolated purchase deduplication, Keychain offline fallback, FNV-1a A/B bucketing, Chi-Square SRM guard, and Trial Timeline templates.',
+    },
+  },
+  {
+    id: 'carplaysynckit',
+    name: 'CarPlaySyncKit v2.0',
+    badge: 'Swift 6 · CarPlay HUD · 17 XCTests',
+    githubUrl: 'https://github.com/Bugraciftci/CarPlaySyncKit',
+    tags: ['Swift 6', 'CarPlay', 'Vector Clocks', 'Ring Buffer', 'SwiftUI HUD'],
+    tagline: {
+      tr: 'iPhone ↔ CarPlay çift yönlü durum senkronizasyonu, Vector-Clock ve HUD simülatörü.',
+      en: 'Bidirectional iPhone ↔ CarPlay state sync engine with Vector Clocks & HUD simulator.',
+    },
+    description: {
+      tr: 'Hıza duyarlı dikkat dağıtma kilitleri, öncelikli çevrimdışı halka tamponu, nedensel Vector-Clock çakışma çözümü ve sürüş telemetrisi oynatıcısı.',
+      en: 'Speed-aware driver distraction lockouts, bounded priority offline ring buffer, causal Vector-Clock conflict resolution, and drive-cycle HUD simulator.',
+    },
+  },
+  {
+    id: 'myfitness',
+    name: 'MyFitness v2.0',
+    badge: 'Swift 6 · SwiftUI · 870+ Exercises',
+    githubUrl: 'https://github.com/Bugraciftci/MyFitness',
+    tags: ['Swift 6', 'SwiftUI', 'Combine MVVM', 'Swift Charts', 'Actor Cache'],
+    tagline: {
+      tr: '870+ animasyonlu egzersiz ansiklopedisi, 1RM hesaplayıcı ve antrenman stüdyosu.',
+      en: 'Native iOS workout studio with 870+ animated exercise demos, Epley 1RM & Swift Charts.',
+    },
+    description: {
+      tr: '2 aşamalı egzersiz form oynatıcısı, bellek+disk önbellekli aktör görsel katmanı, 140 çevrimdışı seed egzersiz ve protokol tabanlı MVVM.',
+      en: '2-phase exercise motion player, actor-isolated RemoteImageCache, 140 offline seed exercises + live CDN sync, and Protocol-Oriented MVVM.',
+    },
+  },
+  {
+    id: 'foodrecipe',
+    name: 'FoodRecipe v2.0',
+    badge: 'Swift 6 · Pantry Matcher · Swift Charts',
+    githubUrl: 'https://github.com/Bugraciftci/FoodRecipe',
+    tags: ['Swift 6', 'SwiftUI', 'Swift Charts', 'TheMealDB API', 'MVVM'],
+    tagline: {
+      tr: 'Akıllı dolap eşleştiricisi, eller serbest adım zamanlayıcısı ve haftalık makro planlayıcı.',
+      en: 'Culinary studio with Smart Pantry % matcher, step timers & Swift Charts macro planner.',
+    },
+    description: {
+      tr: 'Evdeki malzemelere göre % eşleşme sıralaması, canlı TheMealDB + çevrimdışı tarifler, dinamik porsiyon/makro ölçekleme ve reyon bazlı alışveriş listesi.',
+      en: 'Real-time pantry match scoring, live TheMealDB + offline chef catalog, dynamic 1x–12x portion scaling, and aisle-grouped grocery cart.',
+    },
+  },
+  {
+    id: 'agent-eval-harness',
+    name: 'agent-eval-harness v2.0',
+    badge: 'Python · 14 Evaluators · MCP Security',
+    githubUrl: 'https://github.com/Bugraciftci/agent-eval-harness',
+    tags: ['Python 3.11+', 'asyncio', 'MCP Security', 'LLM Evals', 'Zero Deps'],
+    tagline: {
+      tr: 'LLM/MCP ajanları için deterministik değerlendirme, maliyet analizi ve güvenlik testi.',
+      en: 'Zero-dependency async Python eval, cost modeling & adversarial MCP security harness.',
+    },
+    description: {
+      tr: 'Prompt-injection, path traversal, veri sızıntısı ve araç halüsinasyonu yakalayan 14 yerleşik değerlendirici, regresyon diff CLI ve SVG HTML raporları.',
+      en: '14 built-in evaluators including prompt-injection, path/command traversal & exfiltration guards, CI regression diff CLI, and inline SVG HTML reports.',
+    },
+  },
+  {
+    id: 'gamepulse-analytics',
+    name: 'GamePulse-Analytics v2.0',
+    badge: 'FastAPI · SQL Cohorts · RFM & A/B',
+    githubUrl: 'https://github.com/Bugraciftci/GamePulse-Analytics',
+    tags: ['FastAPI', 'SQLite SQL', 'RFM / Gini', 'A/B Z-Test', 'SRM Guard'],
+    tagline: {
+      tr: 'D1–D30 kohort tutundurma, RFM Whale segmentasyonu, LTV/ROAS ve A/B Z-test motoru.',
+      en: 'Product analytics engine for D1–D30 SQL cohorts, RFM Whale tiers, LTV/ROAS & A/B SRM.',
+    },
+    description: {
+      tr: 'İndeksli SQLite kohort analizleri, Whale/At-Risk VIP/Dolphin RFM dağılımı, Gini gelir katsayısı ve Ki-Kare SRM korumalı istatistiksel A/B test paneli.',
+      en: 'Indexed SQLite cohort matrix, RFM Whale & At-Risk VIP segmentation with Gini concentration, payback modeling, and FastAPI live dashboard.',
+    },
+  },
+];
+
 export const TECH_STACK_GROUPS = [
   {
     title: { tr: 'iOS & Apple Frameworks', en: 'iOS & Apple Frameworks' },

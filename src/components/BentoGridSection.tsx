@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { ArrowUpRight, Check, Copy } from 'lucide-react';
 import {
   DEVELOPER_PROFILE,
+  OPEN_SOURCE_PROJECTS,
   PortfolioApp,
   SWIFT_ARCHITECTURE_SNIPPETS,
   TECH_STACK_GROUPS,
@@ -173,6 +174,72 @@ export function BentoGridSection({ lang }: BentoGridSectionProps) {
               <span>{activeSnippet.badge}</span>
               <span>UTF-8 · Swift 6.0</span>
             </div>
+          </div>
+        </div>
+
+        {/* Open-Source Engineering & Systems Grid */}
+        <div className="mt-16">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <div className="text-xs font-mono text-zinc-500 mb-2">
+                {lang === 'tr'
+                  ? 'AÇIK KAYNAK MÜHENDİSLİK PROJELERİ'
+                  : 'OPEN-SOURCE ENGINEERING & SYSTEMS'}
+              </div>
+              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-zinc-100">
+                {lang === 'tr'
+                  ? 'Test Edilmiş Paketler, Araçlar & GitHub Repoları'
+                  : 'Production Packages, Tools & Flagship Repositories'}
+              </h3>
+            </div>
+            <a
+              href={DEVELOPER_PROFILE.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-zinc-400 hover:text-zinc-100 transition-colors"
+            >
+              <span>{lang === 'tr' ? 'Tümünü GitHub’da Gör' : 'View All on GitHub'}</span>
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 border-t border-l border-zinc-800/80">
+            {OPEN_SOURCE_PROJECTS.map((project, index) => (
+              <a
+                key={project.id}
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border-r border-b border-zinc-800/80 bg-[#0C0C0E] p-6 sm:p-7 flex flex-col justify-between transition-colors hover:bg-zinc-900/50"
+              >
+                <div>
+                  <div className="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                      <span className="text-[11px] font-mono text-zinc-500">
+                        0{index + 1} · {project.badge}
+                      </span>
+                      <h4 className="text-base sm:text-lg font-semibold text-zinc-100 group-hover:text-white mt-0.5">
+                        {project.name}
+                      </h4>
+                    </div>
+                    <ArrowUpRight className="h-4 w-4 text-zinc-500 group-hover:text-zinc-100 transition-colors shrink-0 mt-1" />
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-2">
+                    {project.tagline[lang]}
+                  </p>
+                  <p className="text-xs text-zinc-500 leading-relaxed mb-5">
+                    {project.description[lang]}
+                  </p>
+                </div>
+
+                <div className="pt-4 border-t border-zinc-800/70 flex flex-wrap gap-x-3 gap-y-1.5 text-[11px] font-mono text-zinc-400">
+                  {project.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </div>
