@@ -4,6 +4,7 @@
 
 # Muhammed Buğra Çiftçi — Engineering Portfolio
 
+[![CI](https://github.com/Bugraciftci/Portfolyo/actions/workflows/ci.yml/badge.svg)](https://github.com/Bugraciftci/Portfolyo/actions/workflows/ci.yml)
 [![Live Demo](https://img.shields.io/badge/Live_Site-portfolyo--nine--tau.vercel.app-38BDF8?style=for-the-badge&logo=vercel&logoColor=0F172A)](https://portfolyo-nine-tau.vercel.app)
 [![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript_5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)

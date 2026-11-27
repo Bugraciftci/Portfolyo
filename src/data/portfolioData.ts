@@ -1082,7 +1082,7 @@ export const OPEN_SOURCE_PROJECTS: OpenSourceProject[] = [
   {
     id: 'swiftstoreflow',
     name: 'SwiftStoreFlow v2.0',
-    badge: 'Swift 6 · StoreKit 2 · 24 XCTests',
+    badge: 'Swift 6 · StoreKit 2 · 26 XCTests',
     githubUrl: 'https://github.com/Bugraciftci/SwiftStoreFlow',
     tags: ['Swift 6', 'StoreKit 2', 'A/B Bucketing', 'Win-Back Engine', 'Keychain'],
     tagline: {
@@ -1097,7 +1097,7 @@ export const OPEN_SOURCE_PROJECTS: OpenSourceProject[] = [
   {
     id: 'carplaysynckit',
     name: 'CarPlaySyncKit v2.0',
-    badge: 'Swift 6 · CarPlay HUD · 17 XCTests',
+    badge: 'Swift 6 · CarPlay HUD · 19 XCTests',
     githubUrl: 'https://github.com/Bugraciftci/CarPlaySyncKit',
     tags: ['Swift 6', 'CarPlay', 'Vector Clocks', 'Ring Buffer', 'SwiftUI HUD'],
     tagline: {
